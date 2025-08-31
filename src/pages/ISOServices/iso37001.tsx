@@ -1,4 +1,4 @@
-import React from "react";
+
 import iso37001 from "../../assets/services/iso37001.webp";
 import { motion } from "framer-motion";
 

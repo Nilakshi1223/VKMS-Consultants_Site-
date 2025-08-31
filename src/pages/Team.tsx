@@ -1,4 +1,4 @@
-import React from "react";
+
 import { motion } from "framer-motion";
 import TeamBg from "../assets/TeamBackground.webp"; // optional background image
 

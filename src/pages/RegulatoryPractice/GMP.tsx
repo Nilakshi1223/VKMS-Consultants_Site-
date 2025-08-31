@@ -1,4 +1,4 @@
-import React from "react";
+
 import gmpImage from "../../assets/services/gmp.webp"; // Replace with your GMP image path
 import { motion } from "framer-motion";
 

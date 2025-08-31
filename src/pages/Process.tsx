@@ -1,4 +1,4 @@
-import React from "react";
+
 import ProcessImage from "../assets/process.webp";
 
 export default function Process() {

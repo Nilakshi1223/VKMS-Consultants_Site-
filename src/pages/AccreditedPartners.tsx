@@ -1,4 +1,4 @@
-import React from "react";
+
 import { motion } from "framer-motion";
 import QFSLogo from "../assets/qfs-logo.webp";
 import PacificLogo from "../assets/pacific-logo.webp";

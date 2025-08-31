@@ -1,4 +1,4 @@
-import React from "react";
+
 import glpImage from "../../assets/services/glp.webp"; // Replace with your GLP image path
 import { motion } from "framer-motion";
 

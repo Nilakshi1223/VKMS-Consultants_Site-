@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { motion, useMotionValue, useTransform, animate } from "framer-motion";
+import { useEffect, useState } from "react";
+import { motion, useMotionValue,  animate } from "framer-motion";
 import {
   Trophy,
   Users,
@@ -10,7 +10,7 @@ import {
 } from "lucide-react";
 import AboutBg from "../assets/AboutUsBackground.webp";
 import Testimonials from "./Testimonials";
-import Process from "./Process";
+//import Process from "./Process";
 import AccreditedPartners from "./AccreditedPartners";
 
 // Business Features Data
@@ -45,7 +45,7 @@ const businessFeatures = [
 function Counter({ from, to, suffix }: { from: number; to: number; suffix?: string }) {
   const count = useMotionValue(from);
   const [display, setDisplay] = useState(from);
-  const rounded = useTransform(count, (latest) => Math.floor(latest));
+  // const rounded = useTransform(count, (latest) => Math.floor(latest));
 
   useEffect(() => {
     const controls = animate(count, to, {

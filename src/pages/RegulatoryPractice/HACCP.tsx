@@ -1,4 +1,4 @@
-import React from "react";
+
 import haccpImage from "../../assets/services/haccp.webp"; // Replace with your HACCP image path
 import { motion } from "framer-motion";
 
