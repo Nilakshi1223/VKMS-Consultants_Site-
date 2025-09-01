@@ -101,7 +101,7 @@ const Navbar = () => {
                     <div
                       key={item.name}
                       onClick={() => handleHashNavigation(item.path)}
-                      className="block px-4 py-2 hover:bg-blue-50 border-b last:border-b-0 cursor-pointer"
+                      className="block px-4 py-2 hover:bg-blue-50  last:border-b-0 cursor-pointer"
                     >
                       {item.name}
                     </div>
@@ -123,7 +123,7 @@ const Navbar = () => {
                     <Link
                       key={item.name}
                       to={item.path}
-                      className="block px-4 py-2 hover:bg-blue-50 border-b last:border-b-0"
+                      className="block px-4 py-2 hover:bg-blue-50  last:border-b-0"
                     >
                       {item.name}
                     </Link>
