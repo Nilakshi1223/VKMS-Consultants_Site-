@@ -174,7 +174,7 @@ export default function Process() {
                 {/* Step Card */}
                 <div
                   className={`relative w-5/12 p-6 rounded-2xl bg-white/10 backdrop-blur-md border border-white/30 transition-transform duration-500 transform group-hover:scale-105 group-hover:shadow-2xl
-                    ${index % 2 === 0 ? "mr-auto text-left" : "ml-auto text-right"}
+                    ${index % 2 === 0 ? "mr-auto text-left" : "ml-auto text-ellipsis"}
                   `}
                 >
                   <span
