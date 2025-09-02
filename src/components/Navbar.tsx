@@ -10,7 +10,7 @@ const Navbar = () => {
   const navigate = useNavigate();
 
   // Function to handle hash navigation for About sections
-  const handleHashNavigation = (path) => {
+  const handleHashNavigation = (path: string) => {
     const [pathname, hash] = path.split("#");
     if (location.pathname !== pathname) {
       navigate(pathname); // Navigate to /about first
@@ -52,7 +52,8 @@ const Navbar = () => {
     about: [
       { name: "About Us", path: "/about#about-us" },
       { name: "Experience Power", path: "/about#experience-power" },
-      { name: "Accredited Partners", path: "/about#accreditedpartners" },
+      { name: "Certification Process", path: "/about#process" },
+      { name: "Trusted Partners", path: "/about#accreditedpartners" },
       { name: "Success Stories", path: "/about#testimonials" },
     ],
     services: [

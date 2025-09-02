@@ -12,6 +12,7 @@ import AboutBg from "../assets/AboutUsBackground.webp";
 import Testimonials from "./Testimonials";
 //import Process from "./Process";
 import AccreditedPartners from "./AccreditedPartners";
+import Process from "./Process";
 
 // Business Features Data
 const businessFeatures = [
@@ -219,7 +220,7 @@ export default function AboutUs() {
           </div>
         </div>
 
-        {/* <Process/> */}
+        <Process/>
         <AccreditedPartners/>
         <Testimonials/>
       </motion.section>
