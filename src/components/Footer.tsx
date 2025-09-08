@@ -50,7 +50,7 @@ export default function Footer() {
               <li><Link to="/iso14001" className="hover:text-blue-400 transition-colors">ISO 14001</Link></li>
               <li><Link to="/iso15189" className="hover:text-blue-400 transition-colors">ISO 15189</Link></li>
               <li><Link to="/iso17025" className="hover:text-blue-400 transition-colors">ISO 17025</Link></li>
-              <li><Link to="/iso20000" className="hover:text-blue-400 transition-colors">ISO 20000</Link></li>
+              <li><Link to="/iso20001" className="hover:text-blue-400 transition-colors">ISO 20000</Link></li>
               <li><Link to="/iso22000" className="hover:text-blue-400 transition-colors">ISO 22000</Link></li>
               <li><Link to="/iso22301" className="hover:text-blue-400 transition-colors">ISO 22301</Link></li>
               <li><Link to="/iso27001" className="hover:text-blue-400 transition-colors">ISO 27001</Link></li>
