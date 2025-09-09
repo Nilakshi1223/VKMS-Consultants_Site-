@@ -1,13 +1,16 @@
-
 import { motion } from "framer-motion";
-import TeamBg from "../assets/TeamBackground.webp"; // optional background image
+import TeamBg from "../assets/TeamBackground.webp"; 
+import vk from "../assets/vk.webp";
+import mt from "../assets/mt.webp";
+import nt from "../assets/nt.webp";
 
 interface TeamMember {
   name: string;
   title: string;
   description: string;
   role: "Chairman" | "Director" | "Consultant" | "Manager";
-  avatar?: string; // can be initials or URL
+  image?: string; 
+  avatar?: string; // fallback initials
 }
 
 const teamMembers: TeamMember[] = [
@@ -17,6 +20,7 @@ const teamMembers: TeamMember[] = [
     description:
       "Visionary leader with global project experience, committed to innovation and excellence in infrastructure development across multiple countries.",
     role: "Chairman",
+    image: vk,
     avatar: "VK",
   },
   {
@@ -24,6 +28,7 @@ const teamMembers: TeamMember[] = [
     title: "Director",
     description: "Attorney at Law, MBA, ACA, FCMA, AIB, AAAI, FIBM",
     role: "Director",
+    image: mt,
     avatar: "MT",
   },
   {
@@ -31,23 +36,25 @@ const teamMembers: TeamMember[] = [
     title: "Director",
     description: "HNDC, HNDE - ISO",
     role: "Director",
+    image: nt,
     avatar: "NT",
   },
-  {
-    name: "Chandani Ekanayake",
-    title: "Director",
-    description: "PQ HRM (CIPM), MPM (SLIDA)",
-    role: "Director",
-    avatar: "CE",
-  },
-  {
-    name: "Fazil Uwais",
-    title: "Director",
-    description: "Dedicated professional driving success across departments.",
-    role: "Director",
-    avatar: "FU",
-  },
-  // You can add Consultants and Managers here similarly
+  // {
+  //   name: "Chandani Ekanayake",
+  //   title: "Director",
+  //   description: "PQ HRM (CIPM), MPM (SLIDA)",
+  //   role: "Director",
+  //   image: logo,
+  //   avatar: "CE",
+  // },
+  // {
+  //   name: "Fazil Uwais",
+  //   title: "Director",
+  //   description: "Dedicated professional driving success across departments.",
+  //   role: "Director",
+  //   image: logo,
+  //   avatar: "FU",
+  // },
 ];
 
 export default function Team() {
@@ -73,7 +80,9 @@ export default function Team() {
           <h2 className="text-4xl lg:text-5xl font-bold text-white">
             Our Leadership Team
           </h2>
-          <p className="text-lg mt-6 md:text-xl max-w-4xl mx-auto leading-relaxed text-gray-200">Our leadership is driven by excellence, passion, and decades of global industry experience.</p>
+          <p className="text-lg mt-6 md:text-xl max-w-4xl mx-auto leading-relaxed text-gray-200">
+            Our leadership is driven by excellence, passion, and decades of global industry experience.
+          </p>
         </motion.div>
 
         {/* Team Members Grid */}
@@ -87,9 +96,19 @@ export default function Team() {
               viewport={{ once: true }}
               className="bg-white bg-opacity-90 rounded-xl p-6 shadow-md hover:shadow-lg transition flex flex-col items-center text-center"
             >
-              <div className="w-20 h-20 bg-gradient-to-r from-blue-500 to-blue-700 text-white font-bold text-xl rounded-full flex items-center justify-center mb-4 shadow">
-                {member.avatar}
+              {/* Round image / avatar */}
+              <div className="w-36 h-36 rounded-full overflow-hidden mb-4 shadow-lg bg-gradient-to-r from-blue-500 to-blue-700 flex items-center justify-center transform transition duration-300 hover:scale-105">
+                {member.image ? (
+                  <img
+                    src={member.image}
+                    alt={member.name}
+                    className="w-full h-full object-cover"
+                  />
+                ) : (
+                  <span className="text-white font-bold text-xl">{member.avatar}</span>
+                )}
               </div>
+
               <h3 className="text-xl font-semibold text-blue-900">{member.name}</h3>
               <p className="text-blue-700 font-medium">{member.title}</p>
               <p className="text-gray-600 mt-2 text-sm">{member.description}</p>
