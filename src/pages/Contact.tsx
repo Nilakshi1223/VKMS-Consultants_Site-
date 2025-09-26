@@ -5,11 +5,11 @@ import ContactBg from "../assets/ContactBackground.webp";
 export default function Contact() {
   return (
     <section
-      className="relative py-20 bg-cover bg-center bg-no-repeat"
+      className="relative py-10 bg-cover bg-center bg-no-repeat"
       style={{ backgroundImage: `url(${ContactBg})` }}
     >
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black/50"></div>
+      <div className="absolute inset-0 bg-black/10"></div>
 
       {/* Top Title */}
       <div className="relative z-10 text-center mb-16">
@@ -78,12 +78,12 @@ export default function Contact() {
               <Phone size={22} />
             </div>
             <div>
-              <h4 className="text-lg font-semibold text-blue-900">Office</h4>
-              <p className="text-gray-600">011-268 6554</p>
+              <h4 className="text-lg font-semibold text-blue-900">Contact Number</h4>
+              <p className="text-gray-600">070 533 9370</p>
             </div>
           </motion.div>
 
-          {/* Chairman */}
+          {/* Chairman
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -97,7 +97,7 @@ export default function Contact() {
               <h4 className="text-lg font-semibold text-blue-900">Chairman</h4>
               <p className="text-gray-600">077 296 9370 / 070 533 9370</p>
             </div>
-          </motion.div>
+          </motion.div> */}
 
           {/* Director */}
           <motion.div
@@ -131,11 +131,11 @@ export default function Contact() {
               <h4 className="text-lg font-semibold text-blue-900">
                 General Email
               </h4>
-              <p className="text-gray-600">consultants@kectholdings.com</p>
+              <p className="text-gray-600">vkms@kectholdings.com</p>
             </div>
           </motion.div>
 
-          {/* Director Email */}
+          {/* Director Email
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -151,7 +151,7 @@ export default function Contact() {
               </h4>
               <p className="text-gray-600">nalika@kectholdings.com</p>
             </div>
-          </motion.div>
+          </motion.div> */}
         </div>
       </div>
     </section>

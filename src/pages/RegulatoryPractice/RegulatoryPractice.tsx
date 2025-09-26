@@ -34,7 +34,7 @@ export default function RegulatoryPractice() {
   );
 
   return (
-    <section className="bg-gray-50 py-20">
+    <section className="bg-gray-50 py-10">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Header */}
         <motion.div

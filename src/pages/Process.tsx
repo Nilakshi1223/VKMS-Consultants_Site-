@@ -145,7 +145,7 @@ export default function Process() {
           {/* Animated Vertical Line */}
           <div className="absolute left-1/2 top-0 h-full w-1 -translate-x-1/2 bg-gradient-to-b from-blue-400 via-cyan-400 to-green-400 animate-pulse"></div>
 
-          <div className="space-y-20">
+          <div className="space-y-5">
             {steps.map((step, index) => (
               <div
                 key={index}

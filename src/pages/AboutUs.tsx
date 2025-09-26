@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { motion, useMotionValue,  animate } from "framer-motion";
+import { motion, useMotionValue, animate } from "framer-motion";
 import {
   Trophy,
   Users,
@@ -10,7 +10,6 @@ import {
 } from "lucide-react";
 import AboutBg from "../assets/AboutUsBackground.webp";
 import Testimonials from "./Testimonials";
-//import Process from "./Process";
 import AccreditedPartners from "./AccreditedPartners";
 import Process from "./Process";
 
@@ -43,14 +42,21 @@ const businessFeatures = [
 ];
 
 // Counter Component
-function Counter({ from, to, suffix }: { from: number; to: number; suffix?: string }) {
+function Counter({
+  from,
+  to,
+  suffix,
+}: {
+  from: number;
+  to: number;
+  suffix?: string;
+}) {
   const count = useMotionValue(from);
   const [display, setDisplay] = useState(from);
-  // const rounded = useTransform(count, (latest) => Math.floor(latest));
 
   useEffect(() => {
     const controls = animate(count, to, {
-      duration: 2, // animation duration in seconds
+      duration: 2,
       ease: "easeOut",
       onUpdate: (v) => setDisplay(Math.floor(v)),
     });
@@ -75,8 +81,11 @@ export default function AboutUs() {
       <div className="absolute inset-0 bg-black/50"></div>
 
       {/* Hero */}
-      <div id="about-us" className="relative z-10 text-center pt-20 pb-10 px-6 md:px-20">
-        <div  className="inline-block my-8 px-4 py-2 bg-blue-100 text-blue-700 text-sm rounded-full font-medium">
+      <div
+        id="about-us"
+        className="relative z-10 text-center pt-20 pb-10 px-6 md:px-20"
+      >
+        <div className="inline-block my-8 px-4 py-2 bg-blue-100 text-blue-700 text-sm rounded-full font-medium">
           Choosing Us
         </div>
         <motion.h2
@@ -94,7 +103,7 @@ export default function AboutUs() {
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 0.3 }}
         >
-          VKMS is a professional consultancy firm offering ISO certification
+          VK Management Syatems (PVT) LTD is a professional consultancy firm offering ISO certification
           support, management system consultancy, and corporate training
           services. We help organizations achieve global standards of excellence
           through compliance, innovation, and continuous improvement.
@@ -106,7 +115,8 @@ export default function AboutUs() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
           {/* Vision */}
           <motion.div
-            className="bg-white/80 backdrop-blur-md p-8 rounded-2xl shadow-lg border border-gray-200"
+            className="bg-white/80 backdrop-blur-md p-8 rounded-2xl shadow-lg border border-gray-200
+                       hover:scale-105 hover:border-blue-500 hover:shadow-2xl transition-all duration-200 ease-out"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -116,15 +126,16 @@ export default function AboutUs() {
             </div>
             <h3 className="text-2xl font-bold text-blue-900 mb-4">Our Vision</h3>
             <p className="text-blue-700 text-sm leading-relaxed">
-              To be the leading consultancy partner for businesses seeking
-              global standards of excellence, while delivering unmatched
-              services at affordable prices.
+              To be the leading consultancy partner for businesses seeking global
+              standards of excellence, while delivering unmatched services at
+              affordable prices.
             </p>
           </motion.div>
 
           {/* Mission */}
           <motion.div
-            className="bg-white/80 backdrop-blur-md p-8 rounded-2xl shadow-lg border border-gray-200"
+            className="bg-white/80 backdrop-blur-md p-8 rounded-2xl shadow-lg border border-gray-200
+                       hover:scale-105 hover:border-green-500 hover:shadow-2xl transition-all duration-200 ease-out"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
@@ -142,7 +153,8 @@ export default function AboutUs() {
 
           {/* Values */}
           <motion.div
-            className="bg-white/80 backdrop-blur-md p-8 rounded-2xl shadow-lg border border-gray-200"
+            className="bg-white/80 backdrop-blur-md p-8 rounded-2xl shadow-lg border border-gray-200
+                       hover:scale-105 hover:border-purple-500 hover:shadow-2xl transition-all duration-200 ease-out"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.6 }}
@@ -161,34 +173,33 @@ export default function AboutUs() {
         </div>
       </div>
 
-      
-
-      {/* Why Choose Us */}
+      {/* Why Choose Us with Tile Background */}
       <motion.section
         id="experience-power"
         initial={{ opacity: 0, y: 80 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
         viewport={{ once: true }}
-        className="py-20 bg-gradient-to-t from-blue-50 to-blue-300 relative z-10"
+        className="py-16 relative z-10 
+                   bg-gradient-to-r from-blue-50 via-blue-100 to-blue-200 
+                   bg-[url('data:image/svg+xml;utf8,<svg xmlns=\\'http://www.w3.org/2000/svg\\' width=\\'40\\' height=\\'40\\' fill=\\'none\\' stroke=\\'rgba(0,0,0,0.05)\\'><rect width=\\'40\\' height=\\'40\\'/></svg>')]"
       >
-        <div  className="max-w-7xl pb-20 mx-auto px-4 sm:px-6 lg:px-8">
-          
-          <div className="text-center space-y-4 mb-16">
+        <div className="max-w-7xl pb-12 mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center space-y-3 mb-10">
             <div className="inline-block px-4 py-2 bg-blue-100 text-blue-700 text-sm rounded-full font-medium">
-            Expirence Power
-          </div>
-            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900">
+              Expirence Power
+            </div>
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900">
               Why You Should Choose VKMS
             </h2>
-            <p className="text-gray-600 max-w-3xl text-lg mx-auto">
+            <p className="text-gray-600 max-w-2xl text-base mx-auto">
               We stand apart through our experience, reliability, and
               client-centered approach. Here’s what makes us the preferred
               consultancy partner:
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {businessFeatures.map((feature, idx) => {
               const Icon = feature.icon;
               return (
@@ -196,22 +207,26 @@ export default function AboutUs() {
                   key={idx}
                   initial={{ opacity: 0, scale: 0.9 }}
                   whileInView={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.6, delay: idx * 0.2 }}
+                  transition={{ duration: 0.5, delay: idx * 0.15 }}
                   viewport={{ once: true }}
-                  className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 bg-white p-8 text-center space-y-4 rounded-2xl"
+                  className="border-0 shadow-md hover:shadow-xl transition-all duration-200 hover:-translate-y-1 bg-white p-6 text-center space-y-3 rounded-xl"
                 >
                   <div
-                    className={`w-16 h-16 bg-gradient-to-r ${feature.color} rounded-3xl flex items-center justify-center mx-auto hover:scale-110 transition-transform`}
+                    className={`w-14 h-14 bg-gradient-to-r ${feature.color} rounded-2xl flex items-center justify-center mx-auto hover:scale-110 transition-transform`}
                   >
-                    <Icon className="w-8 h-8 text-white" />
+                    <Icon className="w-7 h-7 text-white" />
                   </div>
 
                   {/* Animated Number */}
-                  <h3 className="text-4xl font-extrabold text-gray-900">
-                    <Counter from={feature.from} to={feature.to} suffix={feature.suffix} />
+                  <h3 className="text-3xl font-extrabold text-gray-900">
+                    <Counter
+                      from={feature.from}
+                      to={feature.to}
+                      suffix={feature.suffix}
+                    />
                   </h3>
 
-                  <p className="text-lg font-semibold text-gray-700">
+                  <p className="text-base font-semibold text-gray-700">
                     {feature.title}
                   </p>
                 </motion.div>
@@ -220,11 +235,10 @@ export default function AboutUs() {
           </div>
         </div>
 
-        <Process/>
-        <AccreditedPartners/>
-        <Testimonials/>
+        <Process />
+        <AccreditedPartners />
+        <Testimonials />
       </motion.section>
-      
     </div>
   );
 }

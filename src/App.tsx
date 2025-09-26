@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
+import ScrollToHash from "./components/ScrollToHash";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
@@ -34,6 +35,7 @@ function App() {
   return (
     <Router>
       <ScrollToTop /> {/* ✅ fixes scroll behavior */}
+      <ScrollToHash/>
 
       <div className="flex flex-col min-h-screen">
         <Navbar />
